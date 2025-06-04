@@ -1,4 +1,260 @@
-CSS
+* {
+  box-sizing: border-box;
+}
 
-海賊王に俺はなれた
-背中の傷は剣士の恥だよーん
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* position:relative; */
+}
+
+.container {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  background-color: #ffffff;
+  height:350px;
+  position: relative;
+  /* left: 0; */
+  /* right: 0; */
+}
+
+.container div{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.circle-text {
+  /* position: relative; */
+  width: 400px;  /* 逶ｴ蠕� */
+  height: 150px; /* 蜊雁�縺ｮ鬮倥＆ */
+  font-size: 30px;
+  text-align: center;
+  margin: 100px;
+  overflow: visible; /* 譁�ｭ励′蛻�ｌ縺ｪ縺�ｈ縺�↓隱ｿ謨ｴ */
+}
+
+.title{
+  font-size: 100px;
+  text-align: center;
+  color:#FA6636;
+  margin:10px;
+  margin-top:-10px;
+}
+
+.title-furigana{
+  color:#FDBFAB;
+  font-size: 25px;
+  text-align: center;
+  margin-top:100px;
+  margin-bottom:0;
+}
+
+.circle-text span {
+  /* position: absolute; */
+  margin-top: 20%;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center; /* 蝗櫁ｻ｢縺ｮ蝓ｺ貅也せ繧剃ｸｭ螟ｮ縺ｫ險ｭ螳� */
+  display: inline-block;
+  margin-left: -15px; /* 譁�ｭ励し繧､繧ｺ縺ｫ蜷医ｏ縺帙※隱ｿ謨ｴ */
+  width: auto;
+  height: auto;
+  transform: translateX(-50%); /* 譁�ｭ励�荳ｭ蠢�ｒ蝓ｺ貅悶↓遘ｻ蜍� */
+}
+
+.circle-text .blue {
+  color:#549EBD;
+}
+
+.circle-text .green {
+  color:#91BF80;
+}
+
+.circle-text .orange {
+  color:#FDA345;
+}
+
+.circle-text .yellow {
+  color:#C8C25F;
+}
+
+/* 荳雁濠蜀�↓驟咲ｽｮ */
+.circle-text span:nth-child(1) {
+  transform: rotate(-90deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(2) {
+  transform: rotate(-76deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(3) {
+  transform: rotate(-62deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(4) {
+  transform: rotate(-48deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(5) {
+  transform: rotate(-34deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(6) {
+  transform: rotate(-20deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(7) {
+  transform: rotate(-6deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(8) {
+  transform: rotate(8deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(9) {
+  transform: rotate(22deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(10) {
+  transform: rotate(36deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(11) {
+  transform: rotate(50deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(12) {
+  transform: rotate(64deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(13) {
+  transform: rotate(78deg) translateY(-180px);
+}
+
+.circle-text span:nth-child(14) {
+  transform: rotate(92deg) translateY(-180px);
+}
+
+
+/* 讎りｦ� */
+.about{
+  width:100%;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: space-between;
+    background-color: rgb(240, 240, 240, 0.7);
+}
+
+.about_text{
+  width:50%;
+  text-align: left;
+  margin:100px 0px 100px 40px;
+  padding-left: 180px;
+}
+
+h2{
+  font-size:25px;
+  font-weight:800;
+}
+
+ul{
+  list-style: none;
+  margin: 30px 0px;
+  padding: 0px;
+}
+
+p {
+  text-align: justify;
+  margin-right: 50px;
+}
+
+.text_bold{
+  font-size:25px;
+  line-height:35px;
+  font-weight:500;
+}
+
+.about_flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 繧｢繧ｯ繧ｻ繧ｹ */
+:root {
+  --circle-size: 100px;     /* 蜀�ｼ育判蜒擾ｼ峨�螟ｧ縺阪＆ */
+  --distance: 200px;        /* 荳ｭ蠢�°繧峨�霍晞屬 */
+}
+
+.progress-circular {
+  position: relative;
+  width: calc(var(--distance) * 2);
+  height: calc(var(--distance) * 2);
+  margin: 50px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate-z 30s linear infinite;
+  animation-play-state: running;
+}
+
+.circle {
+  position: absolute;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  animation: rotate-z2 30s linear infinite;
+  animation-play-state: running;
+
+}
+
+/* 5縺､縺ｮ逕ｻ蜒上ｒ蝮�ｭ峨↓蜀�ｽ｢驟咲ｽｮ��72蠎ｦ髢馴囈�� */
+.content_img:nth-child(1) { transform: rotate(0deg)    translateY(calc(-1 * var(--distance))) rotateZ(-0deg); }
+.content_img:nth-child(2) { transform: rotate(72deg)   translateY(calc(-1 * var(--distance))) rotateZ(-72deg); }
+.content_img:nth-child(3) { transform: rotate(144deg)  translateY(calc(-1 * var(--distance))) rotateZ(-144deg); }
+.content_img:nth-child(4) { transform: rotate(216deg)  translateY(calc(-1 * var(--distance))) rotateZ(-216deg); }
+.content_img:nth-child(5) { transform: rotate(288deg)  translateY(calc(-1 * var(--distance))) rotateZ(-288deg); }
+
+@keyframes rotate-z {
+  from { transform: rotateZ(0deg); }
+  to { transform: rotateZ(360deg); }
+}
+
+@keyframes rotate-z2 {
+  from { transform: rotateZ(360deg); }
+  to { transform: rotateZ(0deg); }
+}
+
+
+
+.access_flex{
+  background-color: rgb(240, 240, 240, 0.7);
+  width:100%;
+  padding:100px;
+  display: flex;
+  justify-content: center;
+}
+.access_text{
+  margin-left: 40px;
+}
